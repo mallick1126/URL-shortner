@@ -4,6 +4,9 @@ const linkWrapper = document.querySelector(".link-wrapper");
 const errorDiv = document.querySelector(".error");
 const shortenedLink = document.querySelector(".short-link");
 
+const API_BASE_URL = "http://13.233.7.83:80"; 
+
+
 const handleSubmit = async () => {
   const longUrl = input.value.trim();
 
@@ -14,7 +17,7 @@ const handleSubmit = async () => {
   }
 
   try {
-    const response = await fetch("http://localhost:8080/short-url", {
+    const response = await fetch(`${API_BASE_URL}/short-url`, {
       headers: {
         "Content-Type": "application/json",
       },
