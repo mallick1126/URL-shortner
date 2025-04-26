@@ -6,7 +6,7 @@ import cors from 'cors';
 
 dotenv.config();
 
-const port = process.env.PORT || 8500;
+const port = process.env.PORT || 9600;
 
 
 const app = express();
@@ -26,6 +26,6 @@ app.use('/', urlShortener);
 connectDB();
 
 
-app.listen(port || 9600, ()=>{
+app.listen(port, ()=>{
     console.log(`server started on port ${port}`);
 })
