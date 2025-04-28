@@ -4,7 +4,7 @@ const linkWrapper = document.querySelector(".link-wrapper");
 const errorDiv = document.querySelector(".error");
 const shortenedLink = document.querySelector(".short-link");
 
-const API_BASE_URL = "http://13.233.7.83:80"; 
+const API_BASE_URL = "http://13.233.7.83:80" || "http://localhost:9600"; 
 
 
 const handleSubmit = async () => {
